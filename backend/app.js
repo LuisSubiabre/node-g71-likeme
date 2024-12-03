@@ -29,7 +29,7 @@ app.post("/posts", async (req, res) => {
     titulo: post.titulo,
     img: post.url,
     descripcion: post.descripcion,
-    // likes: post.likes,
+    likes: 0,
   };
   const createdPost = await create(newPost);
   res.json(createdPost);
